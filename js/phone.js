@@ -23,9 +23,9 @@ const displayPhones = phones => {
                         src="${phone.image}"
                         alt="Shoes" />
             </figure>
-            <div class="card-body   ">
+            <div class="card-body  flex flex-col justify-center items-center gap-5 ">
                 <h2 class="card-title">${phone.phone_name}</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <p class="text-center">${phone.slug}</p>
                 <div class="card-actions justify-end">
                 <button class="btn btn-primary">Buy Now</button>
                 </div>
