@@ -47,6 +47,7 @@ const displayPhones = phones => {
         `
         phoneContainer.appendChild(phoneCard)
     })
+    loadSpinner(false)
 }
 
 loadPhone();
@@ -56,8 +57,22 @@ loadPhone();
 // handle search
 
 const handleSearch = () => {
+    loadSpinner(true)
     const searchInput = document.getElementById('search-input');
     const searchInputText = searchInput.value;
     console.log(searchInputText)
     loadPhone(searchInputText)
+}
+
+// loadSpinner
+
+const loadSpinner = (isLoading) => {
+    const loadingSpinner = document.getElementById('spinner-div');
+    if(isLoading){
+        loadingSpinner.classList.remove('hidden')
+    }
+
+    else{
+        loadingSpinner.classList.add('hidden')
+    }
 }
