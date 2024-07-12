@@ -62,9 +62,9 @@
          <!-- Search section -->
         <section class="lg:w-1146px">
             <h2 class="font-semibold lg:text-3xl text-lg text-center mb-10 ">Search Your Phone Here</h2>
-            <div class=" flex flex-row items-center justify-center ">
+            <div class=" flex lg:flex-row flex-col lg:gap-0 gap-4 items-center justify-center ">
                 <div  class="w-full">
-                    <label class="input bg-neutral-50 input-bordered flex items-center gap-2 rounded-r-none">
+                    <label class="input bg-neutral-50 input-bordered flex items-center gap-2 lg:rounded-r-none">
                         <input type="text" id="search-input" class="grow bg-white" placeholder="Search your phone...." />
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@
                       </label>
                 </div>
                 <div id="btn">
-                    <button onclick="handleSearch()" class="btn btn-accent rounded-l-none">Search</button>
+                    <button onclick="handleSearch()" class="btn btn-accent lg:rounded-l-none">Search</button>
                 </div>
             </div>
         </section>

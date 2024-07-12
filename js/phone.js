@@ -41,7 +41,7 @@ const displayPhones = (phones, isShowAll) => {
                 <h2 class="card-title">${phone.phone_name}</h2>
                 <p class="text-center">${phone.slug}</p>
                 <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+                <button onclick = "handleShowDetails('${phone.slug}')" class="btn btn-primary">Show Details</button>
                 </div>
             </div>
 
@@ -52,6 +52,10 @@ const displayPhones = (phones, isShowAll) => {
     })
     loadSpinner(false)
 }
+const handleShowDetails = (id) =>{
+    console.log('clicked show detials', id)
+}
+
 
 loadPhone();
 
