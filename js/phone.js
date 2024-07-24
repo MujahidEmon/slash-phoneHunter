@@ -25,7 +25,7 @@ const displayPhones = (phones, isShowAll) => {
         phones = phones.slice(0,15); 
     }
     phones.forEach(phone =>{
-        console.log(phone);
+        // console.log(phone);
 
         // 1. Creating a div
 
@@ -52,12 +52,37 @@ const displayPhones = (phones, isShowAll) => {
     })
     loadSpinner(false)
 }
-const handleShowDetails = (id) =>{
-    console.log('clicked show detials', id)
+const handleShowDetails =async (id) =>{
+    // console.log('clicked show details', id)
+    const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`)
+    const data = await res.json();
+    const phone = data.data;
+
+    showPhoneDetails(phone)
 }
 
+// Showing Phone details
 
-loadPhone();
+const showPhoneDetails = (phone) =>{
+    console.log(phone)
+    const detailsPhoneName = document.getElementById('details-phone-name');
+    detailsPhoneName.innerText = phone.name;
+
+    const showPhoneDetails = document.getElementById('phone-details-container')
+    showPhoneDetails.innerHTML =`
+    <img class = "flex flex-1 justify-items-center-center mt-4 mb-5" src="${phone.image}">
+    <p class="mb-2"><span class="font-bold">Chipset: </span>${phone.mainFeatures.chipSet}</p>
+    <p class="mb-2"><span class="font-bold">Memory: </span>${phone.mainFeatures.memory}</p>
+    <p class="mb-2"><span class="font-bold">Display Size: </span>${phone.mainFeatures.displaySize}</p>
+    <p class="mb-2"><span class="font-bold">Sensors: </span>${phone.mainFeatures.sensors}</p>
+    
+    `
+
+    my_modal_7.showModal();
+
+}
+
+// loadPhone();
 
 
 

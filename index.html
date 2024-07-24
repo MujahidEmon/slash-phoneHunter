@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
+
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone Hunter</title>
@@ -96,6 +98,28 @@
             <div id="show-all-container" class="text-center mt-5 hidden">             
               <button onclick="handleShowAll()" class="btn btn-outline btn-accent">Show All</button>
             </div>
+
+            <!-- Details Modal -->
+             <div>
+              <!-- Open the modal using ID.showModal() method -->
+                <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+                <dialog id="my_modal_7" class="modal modal-bottom sm:modal-middle">
+                  <div class="modal-box">
+                    <h3 id="details-phone-name" class="text-lg font-bold text-center"></h3>
+                    <div id="phone-details-container">
+
+                    </div>
+
+                    <!-- <p class="py-4">Press ESC key or click the button below to close</p> -->
+                    <div class="modal-action">
+                      <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
+             </div>
         </section>
       </main>
       <!-- footer section -->
