@@ -74,7 +74,7 @@ const showPhoneDetails = (phone) =>{
     <p class="mb-2"><span class="font-bold">Chipset: </span>${phone.mainFeatures.chipSet}</p>
     <p class="mb-2"><span class="font-bold">Memory: </span>${phone.mainFeatures.memory}</p>
     <p class="mb-2"><span class="font-bold">Display Size: </span>${phone.mainFeatures.displaySize}</p>
-    <p class="mb-2"><span class="font-bold">Sensors: </span>${phone.mainFeatures.sensors}</p>
+    <p class="mb-2"><span class="font-bold">Sensors: </span>${phone.mainFeatures.sensors.slice(0,3)}<br>${phone.mainFeatures.sensors.slice(4,9)}</p>
     
     `
 
